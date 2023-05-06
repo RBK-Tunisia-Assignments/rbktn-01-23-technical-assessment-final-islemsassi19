@@ -1,8 +1,8 @@
 import { React } from "react";
-// import Allrecepies from "./allrecepies.jsx";
+//import Allrecepies from "./allrecepies.jsx";
 
 const Home = ({ changeView }) => {
-
+  const [view, setView] = useState("Home");
   return (
     <div>
       <div className="latest_trand_area">
@@ -19,6 +19,7 @@ const Home = ({ changeView }) => {
           </div>
         </div>
       </div>
+      {view === "AllRecipes" && <AllRecipes />}
     </div>
   );
 };
